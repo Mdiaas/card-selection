@@ -9,6 +9,20 @@ export function Home(){
     function handleSetName(name: string){
         setName(name)
     }
+    function spacingNumber(){
+        let numberSpaced = '';
+        let i = 0;
+        for(const char of number){
+            
+            if(i % 4 == 0 && i != 0){
+                numberSpaced += ' '
+            }
+            numberSpaced += char;   
+            i++; 
+                             
+        } 
+        return numberSpaced
+    }
     return (
         
         <HomeContainer>
@@ -40,13 +54,14 @@ export function Home(){
                 <img src={imgCreditCard} alt="" />
                 <div>
                     <CardNumberContainer>
-                        <label htmlFor="">Card number</label>
-                        <span>{number}</span>
+                        <span>{ spacingNumber() }</span>
                     </CardNumberContainer>
                     <OtherInfosContainer>
                         <div>
-                            <label htmlFor="">Nome completo</label>
-                            <span>{name}</span>
+                            <label htmlFor="">
+                                Member since
+                            </label>
+                            <span>01/19</span>
                         </div>
                         <div>
                             <label htmlFor="">Valid Thru</label>

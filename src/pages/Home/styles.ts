@@ -84,6 +84,7 @@ export const OtherInfosContainer = styled.div`
 
     label{
         display:block;
+        font-size: 0.5rem;
     }
     > div{
         text-align:left;
